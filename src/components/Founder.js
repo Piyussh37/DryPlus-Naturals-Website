@@ -1,4 +1,5 @@
 import React from 'react';
+import FounderImg from '../assets/Founder.jpg'; // ✅ Renamed variable to avoid name conflict
 
 const Founder = () => {
   return (
@@ -6,11 +7,13 @@ const Founder = () => {
       <div className="container-max">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+            
             {/* Profile Image */}
             <div className="relative">
               <div className="aspect-square lg:aspect-auto lg:h-full">
+                {/* ✅ Use the imported image variable */}
                 <img 
-                  src="/products/Founder.jpg"
+                  src={FounderImg}
                   alt="Founder of Dry Plus Naturals"
                   className="w-full h-full object-cover"
                 />
@@ -33,7 +36,7 @@ const Founder = () => {
                   Pratik Mahajan
                 </h3>
                 <p className="text-gray-600 text-sm uppercase tracking-wide">
-                Bachelor of Business Administration
+                  Bachelor of Business Administration
                 </p>
               </div>
 
@@ -61,18 +64,10 @@ const Founder = () => {
 
               {/* Founder Stats */}
               <div className="mt-8 grid grid-cols-2 gap-6">
-                {/* <div className="text-center">
-                  <div className="text-2xl font-bold text-nature-green">10+</div>
-                  <div className="text-sm text-gray-600">Years Experience</div>
-                </div> */}
                 <div className="text-center">
                   <div className="text-2xl font-bold text-nature-green">100%</div>
                   <div className="text-sm text-gray-600">Natural Products</div>
                 </div>
-                {/* <div className="text-center">
-                  <div className="text-2xl font-bold text-nature-green">5000+</div>
-                  <div className="text-sm text-gray-600">Happy Customers</div>
-                </div> */}
                 <div className="text-center">
                   <div className="text-2xl font-bold text-nature-green">11</div>
                   <div className="text-sm text-gray-600">Product Varieties</div>
@@ -82,7 +77,7 @@ const Founder = () => {
               {/* Quote */}
               <div className="mt-20 p-6 bg-nature-green/5 rounded-xl border-l-4 border-fresh-green">
                 <blockquote className="text-gray-700 italic">
-                "Building Dry Plus Naturals isn't just about business, it's about creating a healthier tomorrow with every product we deliver."
+                  "Building Dry Plus Naturals isn't just about business, it's about creating a healthier tomorrow with every product we deliver."
                 </blockquote>
                 <cite className="text-sm text-fresh-green font-medium mt-2 block">
                   — Pratik Mahajan, Founder
